@@ -2,6 +2,7 @@
     --background-color-main : #fef8f3 ;
     --bacground-color-secondary : rgb(209, 234, 199);
     --font-color-main : #453f3a;
+    --bird-color : #918c6d;
     --font-stack-main :  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     scroll-behavior: smooth;
 }
@@ -54,6 +55,21 @@ a {
     margin-left: 20px;
 }
 
+.website-name img {
+    width: 50px;
+    position: relative;
+    top: 45px;
+    left: 30px;
+
+    filter: invert(19%) sepia(1%) saturate(5402%) hue-rotate(342deg) brightness(105%) contrast(85%);
+
+}
+
+.website-name img:hover {
+    filter: invert(60%) sepia(8%) saturate(1056%) hue-rotate(14deg) brightness(91%) contrast(88%); 
+
+}
+
 nav {
     max-width: 50%;
     min-width: fit-content;
@@ -63,12 +79,13 @@ nav {
     gap: 3ch;
     font-size: calc(1rem + 0.6vw);
     margin-right: 20px;
+    position: relative;
+    top: 20px
 
 }
 
 nav>a {
-    transition-property: top;
-    transition-duration: 200ms;
+    transition: top 200ms ease;
     padding: 1ch;
     position: relative;
     top: 0;
@@ -77,8 +94,8 @@ nav>a {
 nav>a:hover {
     top: 10px;
     border-radius: 5px;
-    transition-property: top;
-    transition-duration: 200ms;
+    transition : top 200ms ease;
+
     background-color: var(--font-color-main);
     color : var(--background-color-main)
 }
@@ -116,33 +133,48 @@ h1 {
     margin-top: 0px;
 }
 
-.title {
-    font-size: 1.7rem;
-
+.title img {
+    width: 600px;
+    margin-top: 20px;
+    filter: invert(19%) sepia(1%) saturate(5402%) hue-rotate(342deg) brightness(105%) contrast(85%);
 }
+
+
 
 .supertitle {
     font-size: 1.5rem;
+    
+}
+
+.subtitle {
+    height: 100px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    text-align: center;
+    padding-top: 30px;
 }
 
 
 .predstavitev {
-    background-color: var(--bacground-color-secondary);
+    /* background-color: var(--bacground-color-secondary); */
     min-height: 100vh   ;
     padding-top: 50px;
     padding-bottom: 10vh;
+    background: no-repeat url("/images/slonček-white.svg") bottom 60px left 40px / clamp(20%, 500px, 60%), var(--bacground-color-secondary);
 }
 
 .who {
-    width: 70%;
+    width: clamp(none, 70%, 100%);
     margin: auto auto;
     
 }
 
-.who > h2 {
-    font-size: 2rem;
-    margin: 40px auto;
+.predstavitev > h2 {
+    font-size: 2.7rem;
+    margin: 20px auto;
     text-align: center;
+    letter-spacing: 0.3rem;
+
 }
  
 .who > p{
