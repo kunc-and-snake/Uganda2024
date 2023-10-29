@@ -1,0 +1,161 @@
+:root {
+    --background-color-main : #fef8f3 ;
+    --bacground-color-secondary : rgb(209, 234, 199);
+    --font-color-main : #453f3a;
+    --font-stack-main :  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
+}
+
+* {
+    /* border : solid 1px black; */
+}
+
+body {
+    background-color: var(--background-color-main);
+    color : var(--font-color-main);
+    font-family : var(--font-stack-main);
+    margin: 0;
+    
+}
+
+a {
+    text-decoration: none;
+    color : var(--font-color-main);
+}
+.navbar ::selection, .banner ::selection {
+    background: lightblue;
+
+
+}
+.navbar {
+    /* background-color: red; */
+    margin: 0;
+
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    background-color: --background-color-main;
+    display: flex;
+    justify-content: space-between;
+    min-width: 700px;
+
+
+}
+
+.website-name {
+
+    height: 100%;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-left: 20px;
+}
+
+nav {
+    max-width: 50%;
+    min-width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3ch;
+    font-size: calc(1rem + 0.6vw);
+    margin-right: 20px;
+
+}
+
+nav>a {
+    transition-property: top;
+    transition-duration: 200ms;
+    padding: 1ch;
+    position: relative;
+    top: 0;
+}
+
+nav>a:hover {
+    top: 10px;
+    border-radius: 5px;
+    transition-property: top;
+    transition-duration: 200ms;
+    background-color: var(--font-color-main);
+    color : var(--background-color-main)
+}
+
+
+.banner {
+
+    height: calc(100vh - 70px);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-main); 
+    
+}
+
+.banner:after {
+    content: " ";
+
+    position: absolute;
+    top: calc(100vh);
+
+    border-top: 35px solid #fef8f3;
+    border-right: 35px solid transparent;
+    border-left: 35px solid transparent;
+    border-bottom: none;
+
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+.title {
+    font-size: 1.7rem;
+
+}
+
+.supertitle {
+    font-size: 1.5rem;
+}
+
+
+.predstavitev {
+    background-color: var(--bacground-color-secondary);
+    min-height: 100vh   ;
+    padding-top: 50px;
+    padding-bottom: 10vh;
+}
+
+.who {
+    width: 70%;
+    margin: auto auto;
+    
+}
+
+.who > h2 {
+    font-size: 2rem;
+    margin: 40px auto;
+    text-align: center;
+}
+ 
+.who > p{
+    margin: 0 auto;
+    width: 60ch;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.who > img {
+    width: calc(60ch);
+    margin: 20px auto;
+    display: block;
+    border-radius: 3%;
+
+}
